@@ -1,24 +1,29 @@
-import logo from './logo.svg';
+import React from 'react';
+import { Routes, Route, Link } from 'react-router-dom';
 import './App.css';
+import Sidebar from './Sidebar';
+import TimePage from './TimePage'; 
+import LoginPage from './LoginPage';
+import Consulter from './Consulter';
+import ParJour from './ParJour';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div className="Layout">
+        
+    
+          <Routes>  
+            <Route path="/time" element={<TimePage />} />
+            <Route path="/Login" element={<LoginPage />} />
+            <Route path="/Sidebar" element={<Sidebar />} />
+            <Route path="/Consulter" element={<Consulter />} />
+            <Route path="/ParJour" element={<ParJour />} />
+            
+          </Routes>
+        </div>
+      </div>
+
   );
 }
 
